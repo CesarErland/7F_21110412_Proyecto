@@ -1,0 +1,68 @@
+﻿<HMIWindow Versions="5" Title="{x:Null}" ZIndex="0" Script="" Background="#FFFFFFFF" Id="3383115dbbd64bbb956e1c1c5924cdaf" NamePath="Window1" Fill="{x:Null}" Width="1920" Height="1080" Left="0" Top="0" TransformOrigin="0,0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<HMIWindow.ChildScript>
+		<HMIWindowScript FunName="Program" Name="TimerTicked" ScriptContent="dim dt,sql, i&#xA;  &#xA;i = Var.Etapa+1&#xA;&#xA;If Var.Edad&lt;13 Then&#xA;    sql = &quot;SELECT `pregunta` FROM `influenza`.`preguntas_n` WHERE `numero` = '&quot;&amp;i&amp;&quot;'&quot;&#xA;&#x9;dt = DbAccess.PreguntasN.ExecuteScalar(sql)&#xA;&#x9;Var.PreguntaNo = &quot;Pregunta &quot;&amp;i&amp;&quot;&quot;&#xA;    Var.Pregunta = &quot;&quot;&amp;dt&amp;&quot;&quot;&#xA;Else&#xA;    sql = &quot;SELECT `pregunta` FROM `influenza`.`preguntas_a` WHERE `numero` = '&quot;&amp;i&amp;&quot;'&quot;&#xA;&#x9;dt = DbAccess.PreguntasA.ExecuteScalar(sql)&#xA;&#x9;Var.PreguntaNo = &quot;Pregunta &quot;&amp;i&amp;&quot;&quot;&#xA;    Var.Pregunta = &quot;&quot;&amp;dt&amp;&quot;&quot;&#xA;End if" InteverTime="50" Description="" IsEnabled="True" />
+	</HMIWindow.ChildScript>
+	<HMIButton Content="si" ContentHoriAlignment="Center" ContentVertAlignment="Center" IsTriggerOpen="False" ButtonStyle="Classic" StateInfoModel="{x:Null}" AccountCheck="None" ZIndex="0" IsBackgroundImage="False" BackgroundImage="" Background="#FF92D050" FontFamily="Showcard Gothic" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="d7eeaf08c05445b7b2e12196d7735009" Versions="5" NamePath="Window1.Button0" Fill="{x:Null}" Width="388" Height="152" Left="291" Top="573">
+		<HMIButton.DevTextInfo>
+			<HMITextInfo Text="si" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIButton.DevTextInfo>
+		<HMIButton.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIButton.DevFontStyle>
+		<HMIButton.Actions>
+			<HMIEvent Script="Var.Probabilidad = Var.Probabilidad + 1&#xA;Var.Etapa = Var.Etapa + 1&#xA;If Var.Etapa &gt;= 12 Then&#xA;    Var.Etapa = 0&#xA;    If Var.Probabilidad = 0 Then&#xA;        Var.Resultado = &quot;No tiene ningún síntoma, se encuentra sano.&quot;&#xA;&#x9;End if&#xA;&#x9;If Var.Probabilidad &gt; 0 Then&#xA;&#x9;    If Var.Probabilidad &lt; 5 Then&#xA;&#x9;    &#x9;Var.Resultado = &quot;Es poco probable que tenga influenza, repose y tome agua.&quot;&#xA; &#x9;&#x9;ElseIf Var.Probabilidad &lt;9 Then&#xA; &#x9;&#x9;    Var.Resultado = &quot;Es algo probable que tenga influenza, por precaución acuda al médico.&quot;&#xA; &#x9;&#x9;ElseIf Var.Probabilidad &lt;12 Then&#xA; &#x9;&#x9;    Var.Resultado = &quot;Es muy probable que tenga influenza, es necesario acudir al médico.&quot;    &#xA;&#x9;&#x9;End if&#xA;&#x9;&#x9;If Var.Probabilidad =12 Then&#xA;&#x9;    &#x9;Var.Resultado = &quot;Usted tiene todos los síntomas, vaya al médico inmediatamente.&quot;&#xA;&#x9;&#x9;End if&#xA;&#x9;End if&#xA;&#x9;HMICmd.OpenWindowAndCloseOther(&quot;Window2&quot;)&#xA;End if" EventName="MouseLeftButtonUp" Expression="Var.Probabilidad = Var.Probabilidad + 1" />
+		</HMIButton.Actions>
+	</HMIButton>
+	<HMILabel Text="Pregunta # : ¿Sientes....?" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ZIndex="1" Background="#00FFFFFF" FontFamily="Showcard Gothic" FontSize="72" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="d696ea398c11424daf184377d6116d88" Versions="5" NamePath="Window1.Label2" Fill="{x:Null}" Width="1832" Height="160" Left="43" Top="33">
+		<HMILabel.DevTextInfo>
+			<HMITextInfo Text="Pregunta # : ¿Sientes....?" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMILabel.DevTextInfo>
+		<HMILabel.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="72" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMILabel.DevFontStyle>
+		<HMILabel.Animations>
+			<HMITextAnimation ScanTime="300" Expression="Var.PreguntaNo" />
+		</HMILabel.Animations>
+	</HMILabel>
+	<HMIButton Content="no" ContentHoriAlignment="Center" ContentVertAlignment="Center" IsTriggerOpen="False" ButtonStyle="Classic" StateInfoModel="{x:Null}" AccountCheck="None" ZIndex="2" IsBackgroundImage="False" BackgroundImage="" Background="#FFC0504D" FontFamily="Showcard Gothic" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="9b7279e33694456fa6e85585b9d78b61" Versions="5" NamePath="Window1.Button1" Fill="{x:Null}" Width="388" Height="152" Left="1265" Top="573">
+		<HMIButton.DevTextInfo>
+			<HMITextInfo Text="no" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIButton.DevTextInfo>
+		<HMIButton.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIButton.DevFontStyle>
+		<HMIButton.Actions>
+			<HMIEvent Script="Var.Etapa = Var.Etapa + 1&#xA;If Var.Etapa &gt;= 12 Then&#xA;    Var.Etapa = 0&#xA;    If Var.Probabilidad = 0 Then&#xA;        Var.Resultado = &quot;No tiene ningún síntoma, se encuentra sano.&quot;&#xA;&#x9;End if&#xA;&#x9;If Var.Probabilidad &gt; 0 Then&#xA;&#x9;    If Var.Probabilidad &lt; 5 Then&#xA;&#x9;    &#x9;Var.Resultado = &quot;Es poco probable que tenga influenza, repose y tome agua.&quot;&#xA; &#x9;&#x9;ElseIf Var.Probabilidad &lt;9 Then&#xA; &#x9;&#x9;    Var.Resultado = &quot;Es algo probable que tenga influenza, por precaución acuda al médico.&quot;&#xA; &#x9;&#x9;ElseIf Var.Probabilidad &lt;12 Then&#xA; &#x9;&#x9;    Var.Resultado = &quot;Es muy probable que tenga influenza, es necesario acudir al médico.&quot;    &#xA;&#x9;&#x9;End if&#xA;&#x9;&#x9;If Var.Probabilidad =12 Then&#xA;&#x9;    &#x9;Var.Resultado = &quot;Usted tiene todos los síntomas, vaya al médico inmediatamente.&quot;&#xA;&#x9;&#x9;End if&#xA;&#x9;End if&#xA;&#x9;HMICmd.OpenWindowAndCloseOther(&quot;Window2&quot;)&#xA;End if" EventName="MouseLeftButtonUp" Expression="Var.Etapa = Var.Etapa + 1" />
+		</HMIButton.Actions>
+	</HMIButton>
+	<HMIButton Content="Volver" ContentHoriAlignment="Center" ContentVertAlignment="Center" IsTriggerOpen="False" ButtonStyle="Classic" StateInfoModel="{x:Null}" AccountCheck="None" ZIndex="3" IsBackgroundImage="False" BackgroundImage="" FontFamily="Showcard Gothic" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="48e8e32282194ced84a5b671c3998e55" Versions="5" NamePath="Window1.Button2" Fill="{x:Null}" Width="264" Height="92" Left="0" Top="988">
+		<HMIButton.DevTextInfo>
+			<HMITextInfo Text="Volver" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIButton.DevTextInfo>
+		<HMIButton.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIButton.DevFontStyle>
+		<HMIButton.Background>
+			<LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Color="#FFFFA500" Offset="0" />
+					<GradientStop Color="#FFFFA500" Offset="1" />
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</HMIButton.Background>
+		<HMIButton.Actions>
+			<HMIEvent Script="HMICmd.OpenWindowAndCloseOther(&quot;Window0&quot;)&#xD;&#xA;Var.Etapa = 0&#xD;&#xA;Var.Nombre = &quot;&quot;&#xD;&#xA;Var.Edad = 0&#xD;&#xA;Var.Resultado = &quot;&quot;&#xD;&#xA;Var.Pregunta = &quot;&quot;&#xD;&#xA;Var.Probabilidad = 0" EventName="MouseLeftButtonUp" Expression="HMICmd.OpenWindowAndCloseOther(&quot;Window0&quot;)" />
+		</HMIButton.Actions>
+	</HMIButton>
+	<HMILabel Text="Pregunta # : ¿Sientes....?" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ZIndex="4" Background="#00FFFFFF" FontFamily="Showcard Gothic" FontSize="36" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="adaf0cdace2a444eadccca6ebb04457b" Versions="5" NamePath="Window1.Label0" Fill="{x:Null}" Width="1832" Height="160" Left="43" Top="185">
+		<HMILabel.DevTextInfo>
+			<HMITextInfo Text="Pregunta # : ¿Sientes....?" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMILabel.DevTextInfo>
+		<HMILabel.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="36" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMILabel.DevFontStyle>
+		<HMILabel.Animations>
+			<HMITextAnimation ScanTime="300" Expression="Var.Pregunta" />
+		</HMILabel.Animations>
+	</HMILabel>
+</HMIWindow>

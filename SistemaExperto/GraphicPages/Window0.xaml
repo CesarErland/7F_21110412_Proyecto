@@ -1,0 +1,132 @@
+﻿<HMIWindow Versions="5" Title="{x:Null}" ZIndex="0" Script="" Background="#FFFFFFFF" Id="bfd63cb72de644ecaf64485e6b235654" NamePath="Window0" Fill="{x:Null}" Width="1920" Height="1080" Left="0" Top="0" TransformOrigin="0,0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<HMIText Text="Detección de Influenza" TextWrapping="Wrap" ForeColor="#FF000000" FontSize="12" FontWeight="Normal" FontFamily="Showcard Gothic" FontStretch="Normal" FontStyle="Normal" IsStretch="True" ZIndex="0" IsImage="False" FillImage="" Fill="#00FFFFFF" Opacity="1" Stroke="#FF000000" Id="7810361bb86b4083971c0d28611b6fcc" Versions="5" NamePath="Window0.Text0" Width="1654" Height="150" Left="123" Top="121">
+		<HMIText.DevTextInfo>
+			<HMITextInfo Text="Detección de Influenza" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIText.DevTextInfo>
+		<HMIText.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="12" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIText.DevFontStyle>
+	</HMIText>
+	<HMIText Text="Nombre:" TextWrapping="Wrap" ForeColor="#FF000000" FontSize="12" FontWeight="Normal" FontFamily="Times New Roman" FontStretch="Normal" FontStyle="Normal" IsStretch="True" ZIndex="1" IsImage="False" FillImage="" Fill="#00FFFFFF" Opacity="1" Stroke="#FF000000" Id="704fd220de4d4dda9ec8db0d2680823a" Versions="5" NamePath="Window0.Text1" Width="257" Height="100" Left="291" Top="377">
+		<HMIText.DevTextInfo>
+			<HMITextInfo Text="Nombre:" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIText.DevTextInfo>
+		<HMIText.DevFontStyle>
+			<HMIFont TextFontFamily="Times New Roman" TextFontSize="12" TextFontStretch="Normal" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIText.DevFontStyle>
+	</HMIText>
+	<HMIText Text="Edad:" TextWrapping="Wrap" ForeColor="#FF000000" FontSize="12" FontWeight="Normal" FontFamily="Times New Roman" FontStretch="Normal" FontStyle="Normal" IsStretch="True" ZIndex="2" IsImage="False" FillImage="" Fill="#00FFFFFF" Opacity="1" Stroke="#FF000000" Id="92c5d4d421884e6aaf4c7dbf4c9e8599" Versions="5" NamePath="Window0.Text2" Width="169" Height="100" Left="290" Top="486.66666666666669">
+		<HMIText.DevTextInfo>
+			<HMITextInfo Text="Edad:" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIText.DevTextInfo>
+		<HMIText.DevFontStyle>
+			<HMIFont TextFontFamily="Times New Roman" TextFontSize="12" TextFontStretch="Normal" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIText.DevFontStyle>
+	</HMIText>
+	<HMIText Text="Fecha:" TextWrapping="Wrap" ForeColor="#FF000000" FontSize="12" FontWeight="Normal" FontFamily="Times New Roman" FontStretch="Normal" FontStyle="Normal" IsStretch="True" ZIndex="3" IsImage="False" FillImage="" Fill="#00FFFFFF" Opacity="1" Stroke="#FF000000" Id="c9469954d440445aa34e07cfcd06fa9b" Versions="5" NamePath="Window0.Text3" Width="204" Height="100" Left="293" Top="596.33333333333337">
+		<HMIText.DevTextInfo>
+			<HMITextInfo Text="Fecha:" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIText.DevTextInfo>
+		<HMIText.DevFontStyle>
+			<HMIFont TextFontFamily="Times New Roman" TextFontSize="12" TextFontStretch="Normal" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIText.DevFontStyle>
+	</HMIText>
+	<HMIText Text="Hora:" TextWrapping="Wrap" ForeColor="#FF000000" FontSize="12" FontWeight="Normal" FontFamily="Times New Roman" FontStretch="Normal" FontStyle="Normal" IsStretch="True" ZIndex="4" IsImage="False" FillImage="" Fill="#00FFFFFF" Opacity="1" Stroke="#FF000000" Id="92f3fba96d2742818e747f9e589c4cfb" Versions="5" NamePath="Window0.Text4" Width="166" Height="100" Left="292" Top="706">
+		<HMIText.DevTextInfo>
+			<HMITextInfo Text="Hora:" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIText.DevTextInfo>
+		<HMIText.DevFontStyle>
+			<HMIFont TextFontFamily="Times New Roman" TextFontSize="12" TextFontStretch="Normal" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIText.DevFontStyle>
+	</HMIText>
+	<HMIButton Content="Comenzar" ContentHoriAlignment="Center" ContentVertAlignment="Center" IsTriggerOpen="False" ButtonStyle="Classic" StateInfoModel="{x:Null}" AccountCheck="None" ZIndex="5" IsBackgroundImage="False" BackgroundImage="" FontFamily="Showcard Gothic" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="1f7497a43b33402dbd0231d30e1ee7a5" Versions="5" NamePath="Window0.Button0" Fill="{x:Null}" Width="388" Height="152" Left="815" Top="855">
+		<HMIButton.DevTextInfo>
+			<HMITextInfo Text="Comenzar" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIButton.DevTextInfo>
+		<HMIButton.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIButton.DevFontStyle>
+		<HMIButton.Background>
+			<LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Color="#FFFFA500" Offset="0" />
+					<GradientStop Color="#FFFFA500" Offset="1" />
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</HMIButton.Background>
+		<HMIButton.Actions>
+			<HMIEvent Script="HMICmd.OpenWindowAndCloseOther(&quot;Window1&quot;)" EventName="MouseLeftButtonUp" Expression="HMICmd.OpenWindowAndCloseOther(&quot;Window1&quot;)" />
+		</HMIButton.Actions>
+	</HMIButton>
+	<HMITextBox Text="###" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" TextWrapping="NoWrap" AcceptsReturn="False" BorderThickness="2" ZIndex="6" IsBackgroundImage="False" BackgroundImage="" Background="#FFFFFFFF" BorderBrush="#FF000000" FontFamily="Segoe UI" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="9a952d0892bc40098cdd8035d0597217" Versions="5" NamePath="Window0.TextBox0" Fill="{x:Null}" Width="1040" Height="102" Left="558" Top="376" RotateAngle="0" ScaleX="1" ScaleY="1" SkewAngleX="0" SkewAngleY="0" TranslationX="0" TranslationY="0">
+		<HMITextBox.DevTextInfo>
+			<HMITextInfo Text="###" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMITextBox.DevTextInfo>
+		<HMITextBox.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Segoe UI" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMITextBox.DevFontStyle>
+		<HMITextBox.Animations>
+			<HMITextAnimation ScanTime="300" Expression="Var.Nombre" />
+		</HMITextBox.Animations>
+		<HMITextBox.Actions>
+			<HMIEvent Script="call ActionCmd.StringValueInput(&quot;Var.Nombre&quot;,False)" EventName="MouseLeftButtonDown" Expression="call ActionCmd.StringValueInput(&quot;Var.Nombre&quot;,False)" />
+		</HMITextBox.Actions>
+	</HMITextBox>
+	<HMITextBox Text="###" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" TextWrapping="NoWrap" AcceptsReturn="False" BorderThickness="2" ZIndex="7" IsBackgroundImage="False" BackgroundImage="" Background="#FFFFFFFF" BorderBrush="#FF000000" FontFamily="Segoe UI" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="2e85a1f73bcf4b1794647e926dc2a4fb" Versions="5" NamePath="Window0.TextBox1" Fill="{x:Null}" Width="1127" Height="102" Left="471" Top="486" RotateAngle="0" ScaleX="1" ScaleY="1" SkewAngleX="0" SkewAngleY="0" TranslationX="0" TranslationY="0">
+		<HMITextBox.DevTextInfo>
+			<HMITextInfo Text="###" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMITextBox.DevTextInfo>
+		<HMITextBox.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Segoe UI" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMITextBox.DevFontStyle>
+		<HMITextBox.Animations>
+			<HMIAnalogValueDisplayAnimation AnalogVauleFormat="SignedDecimal" DecimalDigits="0" IntegerDigits="1" IsThousandsSeperator="False" ScanTime="300" Expression="Var.Edad" />
+		</HMITextBox.Animations>
+		<HMITextBox.Actions>
+			<HMIEvent Script="call ActionCmd.AnalogValueInput(&quot;Var.Edad&quot;,0,150)" EventName="MouseLeftButtonDown" Expression="call ActionCmd.AnalogValueInput(&quot;Var.Edad&quot;,0,150)" />
+		</HMITextBox.Actions>
+	</HMITextBox>
+	<HMIRectangle ZIndex="8" IsImage="False" FillImage="" Fill="#FFFFFFFF" Opacity="1" Stroke="#FF000000" StrokeThickness="1" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" StrokeDashCap="Flat" StrokeLineJoin="Miter" StrokeMiterLimit="10" StrokeDashOffset="0" StrokeDashArray="" Id="827b2dc8c4ae4632a20fb3365f45d395" Versions="5" NamePath="Window0.Rectangle0" Width="1090" Height="102" Left="508" Top="595" />
+	<HMIRectangle ZIndex="9" IsImage="False" FillImage="" Fill="#FFFFFFFF" Opacity="1" Stroke="#FF000000" StrokeThickness="1" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" StrokeDashCap="Flat" StrokeLineJoin="Miter" StrokeMiterLimit="10" StrokeDashOffset="0" StrokeDashArray="" Id="e1d1984f7eaa44bc90b04b81edd7165e" Versions="5" NamePath="Window0.Rectangle1" Width="1130" Height="102" Left="468" Top="706" />
+	<HMILabel Text="###" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" ZIndex="10" Background="#00FFFFFF" FontFamily="Segoe UI" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="660bb22b4d2d43db8c524fb8e02e7ba1" Versions="5" NamePath="Window0.Label0" Fill="{x:Null}" Width="1090" Height="102" Left="508" Top="595">
+		<HMILabel.DevTextInfo>
+			<HMITextInfo Text="###" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMILabel.DevTextInfo>
+		<HMILabel.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Segoe UI" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMILabel.DevFontStyle>
+		<HMILabel.Animations>
+			<HMITextAnimation ScanTime="300" Expression="Sys.Date" />
+		</HMILabel.Animations>
+	</HMILabel>
+	<HMILabel Text="###" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" ZIndex="11" Background="#00FFFFFF" FontFamily="Segoe UI" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="295201fcf0cd432e93cedb0495b08ae3" Versions="5" NamePath="Window0.Label1" Fill="{x:Null}" Width="1130" Height="102" Left="468" Top="706">
+		<HMILabel.DevTextInfo>
+			<HMITextInfo Text="###" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMILabel.DevTextInfo>
+		<HMILabel.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Segoe UI" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMILabel.DevFontStyle>
+		<HMILabel.Animations>
+			<HMITextAnimation ScanTime="300" Expression="Sys.Time" />
+		</HMILabel.Animations>
+	</HMILabel>
+	<HMIButton Content="análisis anteriores" ContentHoriAlignment="Center" ContentVertAlignment="Center" IsTriggerOpen="False" ButtonStyle="Classic" StateInfoModel="{x:Null}" AccountCheck="None" ZIndex="12" IsBackgroundImage="False" BackgroundImage="" FontFamily="Showcard Gothic" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="1a32653bc8fd415ca31cfde0432042ad" Versions="5" NamePath="Window0.Button1" Fill="{x:Null}" Width="644" Height="87" Left="1276" Top="0">
+		<HMIButton.DevTextInfo>
+			<HMITextInfo Text="análisis anteriores" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIButton.DevTextInfo>
+		<HMIButton.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIButton.DevFontStyle>
+		<HMIButton.Background>
+			<LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Color="#FFFFA500" Offset="0" />
+					<GradientStop Color="#FFFFA500" Offset="1" />
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</HMIButton.Background>
+		<HMIButton.Actions>
+			<HMIEvent Script="HMICmd.OpenWindowAndCloseOther(&quot;Window3&quot;)" EventName="MouseLeftButtonUp" Expression="HMICmd.OpenWindowAndCloseOther(&quot;Window3&quot;)" />
+		</HMIButton.Actions>
+	</HMIButton>
+</HMIWindow>

@@ -1,0 +1,64 @@
+﻿<HMIWindow Versions="5" Title="{x:Null}" ZIndex="0" Script="" Background="#FFFFFFFF" Id="d1a4fc38587245bc957a9ef6563af804" NamePath="Window3" Fill="{x:Null}" Width="1920" Height="1080" Left="0" Top="0" TransformOrigin="0,0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:System="clr-namespace:System;assembly=mscorlib">
+	<HMIWindow.ChildScript>
+		<HMIWindowScript FunName="Program" Name="TimerTicked" ScriptContent="dim dt,sql, i, f, j&#xA;Var.Pruebacuenta = DbAccess.Registros.GetDataSourceRowsCount()&#xA;f = Var.Pruebacuenta&#xA;i = 0&#xA;j = 0&#xA;&#xA;While i &lt; f&#xA;&#x9;j = i+1&#xA;   &#xA;&#x9;Var.NombreR = &quot;Numero&quot;&amp;j&amp;&quot;&quot;&#xA;&#xA;&#xA;&#x9;sql = &quot;SELECT `fecha` FROM `influenza`.`registros` LIMIT &quot;&amp;i&amp;&quot;,1&quot;&#xA;&#x9;dt = DbAccess.Registros.ExecuteScalar(sql)&#xA;&#x9;Var.Pruebaobj = dt&#xA;&#xA;&#x9;i=i+1&#xA;&#xA;&#x9;sql = &quot;SELECT `fecha` FROM `influenza`.`registros` WHERE `fecha` = '&quot;&amp;Var.Pruebaobj&amp;&quot;'&quot;&#xA;&#x9;dt = DbAccess.Registros.ExecuteScalar(sql)&#xA;&#x9;Var.Descfecha = dt&#xA; &#xA;&#x9;sql = &quot;SELECT `nombre` FROM `influenza`.`registros` WHERE `fecha` = '&quot;&amp;Var.Pruebaobj&amp;&quot;'&quot;&#xA;&#x9;dt = DbAccess.Registros.ExecuteScalar(sql)&#xA;&#x9;Var.Descnombre = dt&#xA;&#xA;&#x9;sql = &quot;SELECT `resultado` FROM `influenza`.`registros` WHERE `fecha` = '&quot;&amp;Var.Pruebaobj&amp;&quot;'&quot;&#xA;&#x9;dt = DbAccess.Registros.ExecuteScalar(sql)&#xA;&#x9;Var.Descresultado = dt&#xA;&#xA;&#x9;call RecipeCmd.AddRecipeItem(&quot;Recipe0&quot;,Var.NombreR,&quot;&quot;)&#xA;&#x9;call RecipeCmd.SetRecipeItemValue(&quot;Recipe0&quot;,Var.NombreR,&quot;Fecha&quot;,Var.Descfecha)&#xA;&#x9;call RecipeCmd.SetRecipeItemValue(&quot;Recipe0&quot;,Var.NombreR,&quot;Nombre&quot;,Var.Descnombre)&#xA;&#x9;call RecipeCmd.SetRecipeItemValue(&quot;Recipe0&quot;,Var.NombreR,&quot;Resultado&quot;,Var.Descresultado)&#xA;Wend" InteverTime="1000" Description="" IsEnabled="True" />
+	</HMIWindow.ChildScript>
+	<HMIButton Content="Volver" ContentHoriAlignment="Center" ContentVertAlignment="Center" IsTriggerOpen="False" ButtonStyle="Classic" StateInfoModel="{x:Null}" AccountCheck="None" ZIndex="0" IsBackgroundImage="False" BackgroundImage="" FontFamily="Showcard Gothic" FontSize="60" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Focusable="False" Id="7847a0bcf2264fbead32099d40ba6d3c" Versions="5" NamePath="Window3.Button0" Fill="{x:Null}" Width="264" Height="92" Left="0" Top="988">
+		<HMIButton.DevTextInfo>
+			<HMITextInfo Text="Volver" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIButton.DevTextInfo>
+		<HMIButton.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="60" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIButton.DevFontStyle>
+		<HMIButton.Background>
+			<LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Color="#FFFFA500" Offset="0" />
+					<GradientStop Color="#FFFFA500" Offset="1" />
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</HMIButton.Background>
+		<HMIButton.Actions>
+			<HMIEvent Script="HMICmd.OpenWindowAndCloseOther(&quot;Window0&quot;)" EventName="MouseLeftButtonUp" Expression="HMICmd.OpenWindowAndCloseOther(&quot;Window0&quot;)" />
+		</HMIButton.Actions>
+	</HMIButton>
+	<HMIAdvancedRecipeBrowser RecipeNameList="Recipe0" IsShowToolBar="False" LabelFontFamily="Times New Roman" LabelFontSize="20" LabelFontStretch="Normal" LabelFontStyle="Normal" LabelFontWeight="Normal" IsShowStatusBar="False" LabelForeground="#FF333333" IsBackgroundImage="False" BackgroundImage="" Background="#FFF2DCDB" ZIndex="1" Id="f322a5e7cbf3434995552b5f82f65237" Versions="5" NamePath="Window3.RecipeBrowser0" Fill="{x:Null}" Width="1672" Height="626" Left="122" Top="306" ExtendedKeyValues="&lt;RecipeConfigs Value=&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;RecipeConfigs xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Configs&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;AllDetail&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Transform&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Column&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Add&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Edit&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Delete&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;SaveAll&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;WriteIn&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;WriteOut&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Import&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Export&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Print&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;FilterText&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;    &lt;RecipeToolBarConfig&gt;&#xD;&#xA;      &lt;Name&gt;Filter&lt;/Name&gt;&#xD;&#xA;      &lt;IsVisiable&gt;true&lt;/IsVisiable&gt;&#xD;&#xA;    &lt;/RecipeToolBarConfig&gt;&#xD;&#xA;  &lt;/Configs&gt;&#xD;&#xA;&lt;/RecipeConfigs&gt;&quot;&gt;&lt;/RecipeConfigs&gt;&lt;RecipeColumnWidth Value=&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;RecipeColumnWidths xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;WidthModel&gt;Auto&lt;/WidthModel&gt;&#xD;&#xA;  &lt;Widths /&gt;&#xD;&#xA;&lt;/RecipeColumnWidths&gt;&quot;&gt;&lt;/RecipeColumnWidth&gt;">
+		<HMIAdvancedRecipeBrowser.RecipeDataGridStyle>
+			<HMIDataGridStyle HeadFontColor="#FF000000" ContentFontColor="#FF000000" HoverRowFontColor="#FFFFFFFF" HoverRowBackgroundColor="#FF87CEEB" SelectedRowFontColor="#FF000000" SelectedRowBackgroundColor="#FFF2DCDB" GridBorderColor="#FF000000" GridBorderThickness="1" GridInnerBorderColor="#FF000000" GridInnerBordertThickness="1" IsShowVerticalLine="True" IsShowHorizontalLine="True">
+				<HMIDataGridStyle.HeadFontStyle>
+					<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Microsoft YaHei UI" TextFontSize="24" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+				</HMIDataGridStyle.HeadFontStyle>
+				<HMIDataGridStyle.ContentFontStyle>
+					<HMIFont IsBold="False" IsItalic="False" IsUnderLine="False" TextFontFamily="Microsoft YaHei UI" TextFontSize="12" TextFontStretch="Normal" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+				</HMIDataGridStyle.ContentFontStyle>
+			</HMIDataGridStyle>
+		</HMIAdvancedRecipeBrowser.RecipeDataGridStyle>
+		<HMIAdvancedRecipeBrowser.RecipeColumnConfigurations>
+			<RecipeColumnConfiguration>
+				<RecipeColumnConfiguration.RecipeNameList>
+					<ListString Capacity="4">
+						<System:String>Recipe0</System:String>
+					</ListString>
+				</RecipeColumnConfiguration.RecipeNameList>
+				<RecipeColumnConfiguration.Details>
+					<RecipeColumnConfigurationDetail x:Key="Recipe0">
+						<RecipeColumnConfigurationDetail.Details>
+							<ListRecipeColumnInfo Capacity="4">
+								<RecipeColumnInfo Name="Fecha" Width="230" Alignment="Center" VariablePath="" />
+								<RecipeColumnInfo Name="Nombre" Width="615" Alignment="Center" VariablePath="" />
+								<RecipeColumnInfo Name="Resultado" Width="600" Alignment="Center" VariablePath="" />
+							</ListRecipeColumnInfo>
+						</RecipeColumnConfigurationDetail.Details>
+					</RecipeColumnConfigurationDetail>
+				</RecipeColumnConfiguration.Details>
+			</RecipeColumnConfiguration>
+		</HMIAdvancedRecipeBrowser.RecipeColumnConfigurations>
+	</HMIAdvancedRecipeBrowser>
+	<HMIText Text="Análisis anteriores" TextWrapping="Wrap" ForeColor="#FF000000" FontSize="20" FontWeight="Normal" FontFamily="Showcard Gothic" FontStretch="Normal" FontStyle="Normal" IsStretch="True" ZIndex="2" IsImage="False" FillImage="" Fill="#00FFFFFF" Opacity="1" Stroke="#FF000000" Id="751f9b7c89ed4422be5594a3c231cb0d" Versions="5" NamePath="Window3.Text0" Width="1340" Height="150" Left="277" Top="121">
+		<HMIText.DevTextInfo>
+			<HMITextInfo Text="Análisis anteriores" IsHeritFontFamily="True" IsHeritFontSize="True" IsHeritFontWeight="False" IsHeritFontItalic="False" />
+		</HMIText.DevTextInfo>
+		<HMIText.DevFontStyle>
+			<HMIFont IsBold="False" IsItalic="False" TextFontFamily="Showcard Gothic" TextFontSize="20" TextFontStyle="Normal" TextFontWeight="Normal" IsShowItalic="True" />
+		</HMIText.DevFontStyle>
+	</HMIText>
+</HMIWindow>
